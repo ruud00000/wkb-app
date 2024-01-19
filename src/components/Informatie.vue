@@ -22,7 +22,7 @@ import Producteisen from '/src/assets/producteisen.pdf'
     </template>
     <template #heading>Over de site</template>
 
-    Onder het motto 'het kan altijd beter' zijn er producteisen geformuleerd voor de website. Die kun je <a :href="Producteisen">hier</a> vinden.
+    Onder het motto 'het kan altijd beter' zijn er producteisen geformuleerd voor de website. Die kun je <a :href="Producteisen" target="_blank" rel="noopener">hier</a> vinden.
     
   </Item>
 
