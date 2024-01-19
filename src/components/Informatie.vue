@@ -2,7 +2,7 @@
 import Item from './Item.vue'
 import WKBIcon from './icons/IconWKB.vue'
 import DevIcon from './icons/IconDev.vue'
-import Producteisen from '/src/assets/producteisen.html?url'
+import Producteisen from '/src/assets/producteisen.pdf'
 </script>
 
 <template>

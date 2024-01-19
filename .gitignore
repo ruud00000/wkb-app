@@ -28,3 +28,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+wkb-app*.tgz
