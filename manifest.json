@@ -8,7 +8,7 @@
   "icons": [
       {
         "src": "/img/icons/maskable_icon.png",
-        "sizes": "1240x1240",
+        "sizes": "1024x1024",
         "type": "image/png",
         "purpose": "maskable"
       },
