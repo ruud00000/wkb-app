@@ -10,6 +10,9 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', '/img/icons/ios/180.png'],
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,pdf}'],
+      },
       manifest: {
         name: 'WKB App',
         short_name: 'WKB',
@@ -18,9 +21,6 @@ export default defineConfig({
         start_url: '/',
         display: 'standalone',
         background_color: "#fff",
-        workbox: {
-          globPatterns: ['**/*.{js,css,html,pdf}'],
-        },
         icons: [
           {
             "src": "/img/icons/maskable_icon.png",
