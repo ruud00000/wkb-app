@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import AppHeader from './components/AppHeader.vue'
+import ReloadPrompt from './ReloadPrompt.vue'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import AppHeader from './components/AppHeader.vue'
       </nav>
     </div>
   </header>
-
+  <ReloadPrompt />
   <RouterView />
 </template>
 
