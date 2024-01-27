@@ -3,27 +3,17 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-// import './registerServiceWorker'
-import { registerSW } from 'virtual:pwa-register';
+import { registerSW } from 'virtual:pwa-register'
+
+const intervalMS = 1 * 60 * 1000
 
 const updateSW = registerSW({
-  onOfflineReady() {
-    // Get the dialog element
-    const dialog = document.getElementById('offlineDialog');
-
-    // Show the dialog
-    dialog.style.display = 'block';
-
-    // Attach event listener to the OK button
-    const okButton = document.getElementById('okButton');
-    okButton.addEventListener('click', () => {
-      // Hide the dialog when OK button is clicked
-      dialog.style.display = 'none';
-    });
-  },
-  immediate: true
-});
-
+  onRegistered(r) {
+    r && setInterval(() => {
+      r.update()
+    }, intervalMS)
+  }
+})
 
 const app = createApp(App)
 
