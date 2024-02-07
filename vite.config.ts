@@ -4,7 +4,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig({  
+  /*server: {
+    proxy: {
+      '/api': 'http://fu2.computerhuys.nl', 
+    },
+  },*/
   plugins: [
     vue(),
     VitePWA({
@@ -501,5 +506,21 @@ export default defineConfig({
   },
   build: {
     manifest: false,
+    rollupOptions: {
+      external: [
+        'https://fu2.computerhuys.nl/file/worksheet_12.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_13.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_14.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_15.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_16.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_17.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_18.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_19.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_20.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_21.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_22.pdf',
+        'https://fu2.computerhuys.nl/file/worksheet_23.pdf'
+      ]
+    }
   }
 })
