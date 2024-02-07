@@ -1,22 +1,11 @@
 <script setup>
+const pdfPath = 'https:/fu2.computerhuys.nl/package/public/pdfs/'
 import Item from './Item.vue'
 import HerenIcon from './icons/IconHeren.vue'
 import DamesIcon from './icons/IconDames.vue'
 import TeamsIcon from './icons/IconTeams.vue'
 import UitslagenIcon from './icons/IconUitslagen.vue'
 
-import CHA from '/src/assets/uitslagen/CHA.pdf'
-import CHB from '/src/assets/uitslagen/CHB.pdf'
-import CHC1 from '/src/assets/uitslagen/CHC1.pdf'
-import CHC2 from '/src/assets/uitslagen/CHC2.pdf'
-import CDA from '/src/assets/uitslagen/CDA.pdf'
-import CDB from '/src/assets/uitslagen/CDB.pdf'
-import CDC1 from '/src/assets/uitslagen/CDC1.pdf'
-import CDC2 from '/src/assets/uitslagen/CDC2.pdf'
-import CHT1 from '/src/assets/uitslagen/CHT1.pdf'
-import CHT2 from '/src/assets/uitslagen/CHT2.pdf'
-import CDT1 from '/src/assets/uitslagen/CDT1.pdf'
-import CDT2 from '/src/assets/uitslagen/CDT2.pdf'
 import competitie2023 from '/src/assets/uitslagen/competitie2023.pdf'
 import ms2023klasseopen from '/src/assets/uitslagen/ms2023-klasseopen.pdf'
 import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
@@ -33,6 +22,17 @@ const urls = Object.entries(import.meta.glob('/src/assets/*.pdf', { eager: true,
   <a v-for="url in urls" :key="url[0]" :href="url[1]" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener">CHA</a>
 </template>
 */
+/*import { ref } from 'vue'
+
+const fileUrl = (filename) => {
+  // Use a data URL to handle the MIME type issue
+  const dataUrl = `http://fu2.computerhuys.nl/file/${filename}`
+  const anchor = document.createElement('a')
+  anchor.href = dataUrl
+  document.body.appendChild(anchor)
+  anchor.click()
+  document.body.removeChild(anchor)
+}*/
 </script>
 
 <template>
@@ -44,10 +44,10 @@ const urls = Object.entries(import.meta.glob('/src/assets/*.pdf', { eager: true,
     <template #heading>Individueel heren</template>
 
     Hier zijn de uitslagen voor de heren: 
-    <a :href="CHA" target="_blank" rel="noopener">klasse A</a>, 
-    <a :href="CHB" target="_blank" rel="noopener">klasse B</a>, 
-    <a :href="CHC1" target="_blank" rel="noopener">klasse C1</a>, 
-    <a :href="CHC2" target="_blank" rel="noopener">klasse C2</a>.
+    <a href="http://localhost:3002/file/CHA.pdf" target="_blank" rel="noopener">klasse A</a>, 
+    <a href="http://localhost:3002/file/CHB.pdf" target="_blank" rel="noopener">klasse B</a>, 
+    <a href="http://localhost:3002/file/CHC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
+    <a href="http://localhost:3002/fileCHC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -57,10 +57,10 @@ const urls = Object.entries(import.meta.glob('/src/assets/*.pdf', { eager: true,
     <template #heading>Individueel dames</template>
 
     Hier zijn de uitslagen voor de dames: 
-    <a :href="CDA" target="_blank" rel="noopener">klasse A</a>, 
-    <a :href="CDB" target="_blank" rel="noopener">klasse B</a>, 
-    <a :href="CDC1" target="_blank" rel="noopener">klasse C1</a>, 
-    <a :href="CDC2" target="_blank" rel="noopener">klasse C2</a>.
+    <a href="http://localhost:3002/file/CDA.pdf" target="_blank" rel="noopener">klasse A</a>, 
+    <a href="http://localhost:3002/file/CDB.pdf" target="_blank" rel="noopener">klasse B</a>, 
+    <a href="http://localhost:3002/file/CDC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
+    <a href="http://localhost:3002/file/CDC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -70,10 +70,10 @@ const urls = Object.entries(import.meta.glob('/src/assets/*.pdf', { eager: true,
     <template #heading>Teams</template>
 
     Hier zijn de uitslagen voor de teams: 
-    <a :href="CHT1" target="_blank" rel="noopener">heren 1</a>, 
-    <a :href="CDT1" target="_blank" rel="noopener">dames 1</a>, 
-    <a :href="CHT2" target="_blank" rel="noopener">heren 2</a>, 
-    <a :href="CDT2" target="_blank" rel="noopener">dames 2</a>.
+    <a href="http://localhost:3002/file/CHT1.pdf" target="_blank" rel="noopener">heren 1</a>, 
+    <a href="http://localhost:3002/file/CHT2.pdf" target="_blank" rel="noopener">heren 2</a>, 
+    <a href="http://localhost:3002/file/CDT1.pdf" target="_blank" rel="noopener">dames 1</a>, 
+    <a href="http://localhost:3002/fileCDT2.pdf" target="_blank" rel="noopener">dames 2</a>.
   </Item>
 
   <Item>
