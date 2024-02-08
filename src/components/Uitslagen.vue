@@ -44,10 +44,10 @@ const fileUrl = (filename) => {
     <template #heading>Individueel heren</template>
 
     Hier zijn de uitslagen voor de heren: 
-    <a href="http://localhost:3002/file/CHA.pdf" target="_blank" rel="noopener">klasse A</a>, 
-    <a href="http://localhost:3002/file/CHB.pdf" target="_blank" rel="noopener">klasse B</a>, 
-    <a href="http://localhost:3002/file/CHC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
-    <a href="http://localhost:3002/fileCHC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
+    <a href="https://fu2.computerhuys.nl/file/CHA.pdf" target="_blank" rel="noopener">klasse A</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CHB.pdf" target="_blank" rel="noopener">klasse B</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CHC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CHC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -57,10 +57,10 @@ const fileUrl = (filename) => {
     <template #heading>Individueel dames</template>
 
     Hier zijn de uitslagen voor de dames: 
-    <a href="http://localhost:3002/file/CDA.pdf" target="_blank" rel="noopener">klasse A</a>, 
-    <a href="http://localhost:3002/file/CDB.pdf" target="_blank" rel="noopener">klasse B</a>, 
-    <a href="http://localhost:3002/file/CDC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
-    <a href="http://localhost:3002/file/CDC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
+    <a href="https://fu2.computerhuys.nl/file/CDA.pdf" target="_blank" rel="noopener">klasse A</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CDB.pdf" target="_blank" rel="noopener">klasse B</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CDC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CDC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -70,10 +70,10 @@ const fileUrl = (filename) => {
     <template #heading>Teams</template>
 
     Hier zijn de uitslagen voor de teams: 
-    <a href="http://localhost:3002/file/CHT1.pdf" target="_blank" rel="noopener">heren 1</a>, 
-    <a href="http://localhost:3002/file/CHT2.pdf" target="_blank" rel="noopener">heren 2</a>, 
-    <a href="http://localhost:3002/file/CDT1.pdf" target="_blank" rel="noopener">dames 1</a>, 
-    <a href="http://localhost:3002/fileCDT2.pdf" target="_blank" rel="noopener">dames 2</a>.
+    <a href="https://fu2.computerhuys.nl/file/CHT1.pdf" target="_blank" rel="noopener">heren 1</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CHT2.pdf" target="_blank" rel="noopener">heren 2</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CDT1.pdf" target="_blank" rel="noopener">dames 1</a>, 
+    <a href="https://fu2.computerhuys.nl/file/CDT2.pdf" target="_blank" rel="noopener">dames 2</a>.
   </Item>
 
   <Item>

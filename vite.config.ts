@@ -508,18 +508,18 @@ export default defineConfig({
     manifest: false,
     rollupOptions: {
       external: [
-        'https://fu2.computerhuys.nl/file/worksheet_12.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_13.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_14.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_15.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_16.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_17.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_18.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_19.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_20.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_21.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_22.pdf',
-        'https://fu2.computerhuys.nl/file/worksheet_23.pdf'
+        'https://fu2.computerhuys.nl/file/CHA.pdf',
+        'https://fu2.computerhuys.nl/file/CHB.pdf',
+        'https://fu2.computerhuys.nl/file/CHC1.pdf',
+        'https://fu2.computerhuys.nl/file/CHC2.pdf',
+        'https://fu2.computerhuys.nl/file/CDA.pdf',
+        'https://fu2.computerhuys.nl/file/CDB.pdf',
+        'https://fu2.computerhuys.nl/file/CDC1pdf',
+        'https://fu2.computerhuys.nl/file/CDC2.pdf',
+        'https://fu2.computerhuys.nl/file/CHT1.pdf',
+        'https://fu2.computerhuys.nl/file/CHT2.pdf',
+        'https://fu2.computerhuys.nl/file/CDT1.pdf',
+        'https://fu2.computerhuys.nl/file/CDT2.pdf'
       ]
     }
   }
