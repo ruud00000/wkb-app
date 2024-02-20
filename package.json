@@ -20,7 +20,8 @@
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
-  "devDependencies": {
+  "devDependencies": {    
+    "@vite-pwa/assets-generator": "^0.2.3",
     "@vitejs/plugin-vue": "^4.6.2",
     "@vue/test-utils": "^2.4.3",
     "cypress": "^13.6.3",
