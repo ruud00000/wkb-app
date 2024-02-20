@@ -1,5 +1,4 @@
 <script setup>
-const pdfPath = 'https:/fu2.computerhuys.nl/package/public/pdfs/'
 import Item from './Item.vue'
 import HerenIcon from './icons/IconHeren.vue'
 import DamesIcon from './icons/IconDames.vue'
@@ -9,6 +8,11 @@ import UitslagenIcon from './icons/IconUitslagen.vue'
 import competitie2023 from '/src/assets/uitslagen/competitie2023.pdf'
 import ms2023klasseopen from '/src/assets/uitslagen/ms2023-klasseopen.pdf'
 import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
+
+import { ref } from 'vue'
+
+const pdfPath = import.meta.env.VITE_PDF_ENDPOINT 
+
 
 /* alle pdf's importeren:
 Bron: https://discord.com/channels/937808017016119440/937973377883336704/1200214243031658536
@@ -26,7 +30,7 @@ const urls = Object.entries(import.meta.glob('/src/assets/*.pdf', { eager: true,
 
 const fileUrl = (filename) => {
   // Use a data URL to handle the MIME type issue
-  const dataUrl = `http://fu2.computerhuys.nl/file/${filename}`
+  const dataUrl = `${pdfPath}${filename}`
   const anchor = document.createElement('a')
   anchor.href = dataUrl
   document.body.appendChild(anchor)
@@ -42,12 +46,12 @@ const fileUrl = (filename) => {
       <HerenIcon />
     </template>
     <template #heading>Individueel heren</template>
-
+    <!--TODO: hide url-->
     Hier zijn de uitslagen voor de heren: 
-    <a href="https://fu2.computerhuys.nl/file/CHA.pdf" target="_blank" rel="noopener">klasse A</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CHB.pdf" target="_blank" rel="noopener">klasse B</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CHC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CHC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
+    <a :href="pdfPath + 'CHA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
+    <a :href="pdfPath + 'CHB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
+    <a :href="pdfPath + 'CHC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
+    <a :href="pdfPath + 'CHC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -57,10 +61,10 @@ const fileUrl = (filename) => {
     <template #heading>Individueel dames</template>
 
     Hier zijn de uitslagen voor de dames: 
-    <a href="https://fu2.computerhuys.nl/file/CDA.pdf" target="_blank" rel="noopener">klasse A</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CDB.pdf" target="_blank" rel="noopener">klasse B</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CDC1.pdf" target="_blank" rel="noopener">klasse C1</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CDC2.pdf" target="_blank" rel="noopener">klasse C2</a>.
+    <a :href="pdfPath + 'CDA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
+    <a :href="pdfPath + 'CDB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
+    <a :href="pdfPath + 'CDC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
+    <a :href="pdfPath + 'CDC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
   </Item>
 
   <Item>
@@ -70,10 +74,10 @@ const fileUrl = (filename) => {
     <template #heading>Teams</template>
 
     Hier zijn de uitslagen voor de teams: 
-    <a href="https://fu2.computerhuys.nl/file/CHT1.pdf" target="_blank" rel="noopener">heren 1</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CHT2.pdf" target="_blank" rel="noopener">heren 2</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CDT1.pdf" target="_blank" rel="noopener">dames 1</a>, 
-    <a href="https://fu2.computerhuys.nl/file/CDT2.pdf" target="_blank" rel="noopener">dames 2</a>.
+    <a :href="pdfPath + 'CHT1.pdf'" target="_blank" rel="noopener">heren 1</a>, 
+    <a :href="pdfPath + 'CHT2.pdf'" target="_blank" rel="noopener">heren 2</a>, 
+    <a :href="pdfPath + 'CDT1.pdf'" target="_blank" rel="noopener">dames 1</a>, 
+    <a :href="pdfPath + 'CDT2.pdf'" target="_blank" rel="noopener">dames 2</a>.
   </Item>
 
   <Item>
