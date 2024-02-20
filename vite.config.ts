@@ -58,24 +58,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  build: {
-    manifest: false,
-    rollupOptions: {
-      external: [
-        'https://fu2.computerhuys.nl/file/CHA.pdf',
-        'https://fu2.computerhuys.nl/file/CHB.pdf',
-        'https://fu2.computerhuys.nl/file/CHC1.pdf',
-        'https://fu2.computerhuys.nl/file/CHC2.pdf',
-        'https://fu2.computerhuys.nl/file/CDA.pdf',
-        'https://fu2.computerhuys.nl/file/CDB.pdf',
-        'https://fu2.computerhuys.nl/file/CDC1pdf',
-        'https://fu2.computerhuys.nl/file/CDC2.pdf',
-        'https://fu2.computerhuys.nl/file/CHT1.pdf',
-        'https://fu2.computerhuys.nl/file/CHT2.pdf',
-        'https://fu2.computerhuys.nl/file/CDT1.pdf',
-        'https://fu2.computerhuys.nl/file/CDT2.pdf'
-      ]
-    }
   }
 })
