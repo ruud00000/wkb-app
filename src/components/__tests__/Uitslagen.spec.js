@@ -11,31 +11,6 @@ import competitie2023 from '/src/assets/uitslagen/competitie2023.pdf'
 import ms2023klasseopen from '/src/assets/uitslagen/ms2023-klasseopen.pdf'
 import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
 
-// Start writing your test suites
-/* test('Uitslagen renders correctly', () => {
-  // Mount the component
-  const wrapper = mount(Uitslagen);
-
-  // Your assertions go here
-  // Example: Assert that the component contains certain elements or text
-  const links = wrapper.findAll('a')
-  assert.equal(links.length, 15, 'Should have 15 links');
-}); */
-
-/* test('Uitslagen logic test', () => {
-  // Mount the component
-  const wrapper = mount(Uitslagen);
-
-  // Access component properties and test their values
-  assert.equal(wrapper.instance.pdfPath, import.meta.env.VITE_PDF_ENDPOINT, 'pdfPath should match environment variable');
-
-  // Example: Simulate a change in the environment variable and check if the component updates
-  import.meta.env.VITE_PDF_ENDPOINT = 'new/pdf/path';
-  wrapper.update();
-  assert.equal(wrapper.instance.pdfPath, 'new/pdf/path', 'pdfPath should update with environment variable change');
-}); */
-
-
 
   describe('Uitslagen.vue', () => {
     it('renders 4 Item components', async () => {

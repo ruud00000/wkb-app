@@ -6,3 +6,4 @@ cypress/
 cypres*
 public/
 .env
+*.cy.js
