@@ -1,5 +1,6 @@
 <script setup>
 import Item from './Item.vue'
+import BestuurIcon from './icons/IconBestuur.vue'
 import WKBIcon from './icons/IconWKB.vue'
 import DevIcon from './icons/IconDev.vue'
 import Producteisen from '/src/assets/producteisen.pdf'
@@ -10,6 +11,18 @@ const version = packageJson.version
 </script>
 
 <template>
+
+<Item>
+    <template #icon>
+      <BestuurIcon />
+    </template>
+    <template #heading>WKB bestuur</template>
+    Voorzitter: Gerrit Hendriksen (telefoon: 06-51355356)<br>
+    Secretaris:  Marissa Tervoert (email: secretariaatwkb@gmail.com)<br>
+    Penningmeester: Jo Kimmels<br>
+
+    Bestuursleden: Bennie Berenschot, Marion Derksen, Mark Langewouters (vicevoorzitter), Jan ten Pas 
+  </Item>
 
   <Item>
     <template #icon>

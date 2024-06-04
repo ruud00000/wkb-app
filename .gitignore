@@ -20,6 +20,10 @@ coverage
 /cypress/videos/
 /cypress/screenshots/
 
+/src/assets/agenda
+/src/assets/uitslagen
+/src/assets/nieuws
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
