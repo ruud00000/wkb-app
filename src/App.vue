@@ -15,7 +15,7 @@ import ReloadPrompt from './ReloadPrompt.vue'
         <RouterLink to="/">Uitslagen</RouterLink>
         <RouterLink to="/nieuws">Nieuws</RouterLink>
         <RouterLink to="/agenda">Agenda</RouterLink>
-        <RouterLink to="/informatie">Informatie</RouterLink>
+        <RouterLink to="/informatie">Info</RouterLink>
       </nav>
     </div>
   </header>
