@@ -17,11 +17,16 @@ const version = packageJson.version
       <BestuurIcon />
     </template>
     <template #heading>WKB bestuur</template>
-    Voorzitter: Gerrit Hendriksen (telefoon: 06-51355356)<br>
-    Secretaris:  Marissa Tervoert (email: secretariaatwkb@gmail.com)<br>
+    Voorzitter: Gerrit Hendriksen<br>
+    Secretaris:  Marissa Tervoert<br>
     Penningmeester: Jo Kimmels<br>
 
-    Bestuursleden: Bennie Berenschot, Marion Derksen, Mark Langewouters (vicevoorzitter), Jan ten Pas 
+    Bestuursleden: Bennie Berenschot, Marion Derksen, Mark Langewouters (vicevoorzitter), Jan ten Pas<br><br>
+    
+    <span><font-awesome-icon :icon="['fa', 'phone']" /></span>
+    <a class="link" href="tel:+31(0)6 51 35 53 56">+31(0)6 51 35 53 56</a><br>
+    <span><font-awesome-icon :icon="['fa', 'envelope']" /></span>
+    <a class="link" href="mailto:secretariaatwkb@gmail.com">secretariaatwkb@gmail.com</a>
   </Item>
 
   <Item>
@@ -44,3 +49,9 @@ const version = packageJson.version
   </Item>
 
 </template>
+
+<style>
+.svg-inline--fa {
+  margin-right: 5px;
+}
+</style>

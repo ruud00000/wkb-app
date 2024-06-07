@@ -7,3 +7,4 @@ import Informatie from '../components/Informatie.vue'
     <Informatie />
   </main>
 </template>
+
