@@ -1,22 +1,38 @@
 <script setup>
-import Item from './Item.vue'
-import NieuwsItemIcon from './icons/IconNieuwsItem.vue'
-import Foto001 from '/src/assets/nieuws/Team-Winterswijk-2-kampioen-Landelijke-Competitie-divisie-4-20232024.jpg'
-import packageJson from '../../package.json'
+  import Item from './Item.vue'
+  import NieuwsItemIcon from './icons/IconNieuwsItem.vue'
+  import { ref, onMounted } from 'vue'
 
-const version = packageJson.version
+  const imgPath = import.meta.env.VITE_IMG_ENDPOINT 
+  const nieuwsEndpoint = import.meta.env.VITE_NIEUWS_ENDPOINT 
 
+  const nieuwsItems = ref(null)
+
+  async function fetchNieuws() {
+    const res = await fetch(nieuwsEndpoint)
+    return await res.json()
+  }
+
+  onMounted(async () => {
+    const result = await fetchNieuws()
+    nieuwsItems.value = result 
+  })
 </script>
 
 <template>
-
-<Item>
-    <template #icon>
-      <NieuwsItemIcon />
-    </template>
-    <template #heading>Landelijke competitie succes</template>
-    <img :src="Foto001" width="100%">
-    In de landelijke competitie (divisie 4) is Team 2 afkomstig uit Winterswijk kampioen geworden. Deze gigantische prestatie is niet onopgemerkt gebleven. Zo werden alle aanwezige spelers tijdens de ALV van de WKB op 25 maart jl. gehuldigd. Wij feliciteren het team met het bereiken van het kampioenschap!  
-  </Item>
-
+  <div v-if="nieuwsItems">
+    <Item v-for="nieuwsItem in nieuwsItems">
+      <template #icon>
+        <NieuwsItemIcon />
+      </template>
+      <template #heading>{{ nieuwsItem.titel_kort }}</template>
+      <img :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
+      <p>{{ nieuwsItem.inhoud_lang }}</p>
+    </Item>
+  </div>
+  <div v-else>
+    <Item>
+      <p>Laden...</p>
+    </Item>
+  </div>
 </template>
