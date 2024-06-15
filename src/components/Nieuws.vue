@@ -1,13 +1,16 @@
 <script setup>
   import Item from './Item.vue'
   import NieuwsItemIcon from './icons/IconNieuwsItem.vue'
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, computed } from 'vue'
 
   const imgPath = import.meta.env.VITE_IMG_ENDPOINT 
   const nieuwsEndpoint = import.meta.env.VITE_NIEUWS_ENDPOINT 
 
-  const nieuwsItems = ref(null)
-
+  const nieuwsItems = ref([])
+  const filteredNieuwsItems = computed(() => {
+      return nieuwsItems.value.filter(item => item.visibility)
+    }) 
+  
   async function fetchNieuws() {
     const res = await fetch(nieuwsEndpoint)
     return await res.json()
@@ -15,19 +18,24 @@
 
   onMounted(async () => {
     const result = await fetchNieuws()
-    nieuwsItems.value = result 
+    nieuwsItems.value = result
+    console.log('nieuwsItems: ', nieuwsItems.value)
+    console.log('filteredNieuwsItems: ', filteredNieuwsItems.value)
   })
 </script>
 
 <template>
-  <div v-if="nieuwsItems">
-    <Item v-for="nieuwsItem in nieuwsItems">
-      <template #icon>
-        <NieuwsItemIcon />
-      </template>
-      <template #heading>{{ nieuwsItem.titel_kort }}</template>
-      <img :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
-      <p>{{ nieuwsItem.inhoud_lang }}</p>
+  <div v-if="filteredNieuwsItems">
+
+    <Item v-for="nieuwsItem in filteredNieuwsItems">
+        <template #icon>
+          <NieuwsItemIcon />
+        </template>
+        <template #heading>{{ nieuwsItem.titel_kort }}</template>
+        <div v-if="nieuwsItem.foto_naam">
+          <img :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
+        </div>
+        <p>{{ nieuwsItem.inhoud_lang }}</p>
     </Item>
   </div>
   <div v-else>
