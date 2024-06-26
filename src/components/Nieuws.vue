@@ -33,7 +33,7 @@
         </template>
         <template #heading>{{ nieuwsItem.titel_kort }}</template>
         <div v-if="nieuwsItem.foto_naam">
-          <img :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
+          <img :id="nieuwsItem._id" :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
         </div>
         <p>{{ nieuwsItem.inhoud_lang }}</p>
     </Item>

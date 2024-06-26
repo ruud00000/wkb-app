@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// cypress/support/commands.js
+
+/*Cypress.Commands.add('getHref', (key) => {
+    const env = Cypress.env('environment') || 'dev';
+    return Cypress.env(env)[key];
+  });*/
+  

@@ -15,7 +15,7 @@ import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
   describe('Uitslagen.vue', () => {
     it('renders 4 Item components', async () => {
       // Create Vite app instance
-      const app = await mount(Uitslagen)
+      const app = mount(Uitslagen)
   
       // Access the rendered component
       const component = app.getComponent(Uitslagen)
@@ -27,7 +27,7 @@ import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
 
     it('renders hrefs correctly', async () => {
         // Create Vite app instance
-        const app = await mount(Uitslagen)
+        const app = mount(Uitslagen)
     
         // Access the rendered component
         const component = app.getComponent(Uitslagen)

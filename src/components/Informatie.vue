@@ -24,9 +24,9 @@ const version = packageJson.version
     Bestuursleden: Bennie Berenschot, Marion Derksen, Mark Langewouters (vicevoorzitter), Jan ten Pas<br><br>
     
     <span><font-awesome-icon :icon="['fa', 'phone']" /></span>
-    <a class="link" href="tel:+31(0)6 51 35 53 56">+31(0)6 51 35 53 56</a><br>
+    <a id="tel" class="link" href="tel:+31(0)6 51 35 53 56">+31(0)6 51 35 53 56</a><br>
     <span><font-awesome-icon :icon="['fa', 'envelope']" /></span>
-    <a class="link" href="mailto:secretariaatwkb@gmail.com">secretariaatwkb@gmail.com</a>
+    <a id="email" class="link" href="mailto:secretariaatwkb@gmail.com">secretariaatwkb@gmail.com</a>
   </Item>
 
   <Item>
@@ -44,7 +44,7 @@ const version = packageJson.version
     </template>
     <template #heading>Over de site</template>
 
-    Onder het motto 'het kan altijd beter' zijn er producteisen geformuleerd voor de website. Die kun je <a :href="Producteisen" target="_blank" rel="noopener">hier</a> vinden.
+    Onder het motto 'het kan altijd beter' zijn er producteisen geformuleerd voor de website. Die kun je <a id="producteisen" :href="Producteisen" target="_blank" rel="noopener">hier</a> vinden.
     Dit is versie {{ version }}.
   </Item>
 
