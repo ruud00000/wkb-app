@@ -9,6 +9,7 @@ import DevIcon from '../icons/IconDev.vue'
 describe('Informatie.vue', () => {
   it('renders WKB bestuur correctly', async () => {
     const wrapper = mount(Informatie)
+    await wrapper.vm.$nextTick()
     expect(wrapper.findComponent(BestuurIcon).exists()).toBe(true)
     expect(wrapper.text()).toContain('WKB bestuur')
     expect(wrapper.text()).toContain('Voorzitter: Gerrit Hendriksen')
@@ -21,6 +22,7 @@ describe('Informatie.vue', () => {
   
   it('renders Over de WKB correctly', async () => {
     const wrapper = mount(Informatie)
+    await wrapper.vm.$nextTick()
     expect(wrapper.findComponent(WKBIcon).exists()).toBe(true)
     expect(wrapper.text()).toContain('Over de WKB')
     expect(wrapper.text()).toContain('De Winterswijkse Kegelbond (WKB) is opgericht op 27 april 1981 (K.v.K 103042) · Aangesloten bij de Koninklijke Nederlandse Kegel Bond · Aangesloten bij NOC/NSF · Kegelbond gevestigd in Winterswijk.')
@@ -28,6 +30,7 @@ describe('Informatie.vue', () => {
 
   it('renders Over de site correctly', async () => {
     const wrapper = mount(Informatie)
+    await wrapper.vm.$nextTick()
     expect(wrapper.findComponent(DevIcon).exists()).toBe(true)
     expect(wrapper.text()).toContain('Over de site')
     expect(wrapper.text()).toContain(`Onder het motto 'het kan altijd beter' zijn er producteisen geformuleerd voor de website. Die kun je hier vinden. Dit is versie`)

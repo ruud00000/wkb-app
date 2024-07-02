@@ -18,9 +18,11 @@ const version = packageJson.version
       <AgendaCompetitieIcon />
     </template>
     <template #heading>Competitiedata</template>
-    Er zijn nog twee rondes te gaan in de competitie van 2024: 
-    <a :href="AgendaCompetitieRonde5" target="_blank" rel="noopener">ronde 5</a> en 
-    <a :href="AgendaCompetitieRonde6" target="_blank" rel="noopener">ronde 6</a>.    
+    <template #content>
+      Er zijn nog twee rondes te gaan in de competitie van 2024: 
+      <a :href="AgendaCompetitieRonde5" target="_blank" rel="noopener">ronde 5</a> en 
+      <a :href="AgendaCompetitieRonde6" target="_blank" rel="noopener">ronde 6</a>.    
+    </template>
   </Item>
 
   <Item>
@@ -28,7 +30,9 @@ const version = packageJson.version
       <AgendaLandelijkeCompetitieIcon />
     </template>
     <template #heading>Landelijke competitie</template>
-    Hier is het <a :href="AgendaCompetitieLandelijk" target="_blank" rel="noopener">gooischema</a> voor de landelijke competitie 2024-2025.
+    <template #content>
+      Hier is het <a :href="AgendaCompetitieLandelijk" target="_blank" rel="noopener">gooischema</a> voor de landelijke competitie 2024-2025.
+    </template>
   </Item>
 
 </template>

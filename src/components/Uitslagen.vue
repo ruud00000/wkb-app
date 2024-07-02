@@ -46,12 +46,14 @@ const fileUrl = (filename) => {
       <HerenIcon />
     </template>
     <template #heading>Individueel heren</template>
-    <!--TODO: hide url-->
-    Hier zijn de uitslagen voor de heren: 
-    <a :href="pdfPath + 'CHA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
-    <a :href="pdfPath + 'CHB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
-    <a :href="pdfPath + 'CHC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
-    <a :href="pdfPath + 'CHC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
+    <template #content>
+      <!--TODO: hide url-->
+      Hier zijn de uitslagen voor de heren: 
+      <a :href="pdfPath + 'CHA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
+      <a :href="pdfPath + 'CHB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
+      <a :href="pdfPath + 'CHC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
+      <a :href="pdfPath + 'CHC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
+    </template>
   </Item>
 
   <Item>
@@ -59,12 +61,13 @@ const fileUrl = (filename) => {
       <DamesIcon />
     </template>
     <template #heading>Individueel dames</template>
-
-    Hier zijn de uitslagen voor de dames: 
-    <a :href="pdfPath + 'CDA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
-    <a :href="pdfPath + 'CDB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
-    <a :href="pdfPath + 'CDC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
-    <a :href="pdfPath + 'CDC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
+    <template #content>
+      Hier zijn de uitslagen voor de dames: 
+      <a :href="pdfPath + 'CDA.pdf'" target="_blank" rel="noopener">klasse A</a>, 
+      <a :href="pdfPath + 'CDB.pdf'" target="_blank" rel="noopener">klasse B</a>, 
+      <a :href="pdfPath + 'CDC1.pdf'" target="_blank" rel="noopener">klasse C1</a>, 
+      <a :href="pdfPath + 'CDC2.pdf'" target="_blank" rel="noopener">klasse C2</a>.
+    </template>
   </Item>
 
   <Item>
@@ -72,12 +75,13 @@ const fileUrl = (filename) => {
       <TeamsIcon />
     </template>
     <template #heading>Teams</template>
-
-    Hier zijn de uitslagen voor de teams: 
-    <a :href="pdfPath + 'CHT1.pdf'" target="_blank" rel="noopener">heren 1</a>, 
-    <a :href="pdfPath + 'CHT2.pdf'" target="_blank" rel="noopener">heren 2</a>, 
-    <a :href="pdfPath + 'CDT1.pdf'" target="_blank" rel="noopener">dames 1</a>, 
-    <a :href="pdfPath + 'CDT2.pdf'" target="_blank" rel="noopener">dames 2</a>.
+    <template #content>
+      Hier zijn de uitslagen voor de teams: 
+      <a :href="pdfPath + 'CHT1.pdf'" target="_blank" rel="noopener">heren 1</a>, 
+      <a :href="pdfPath + 'CHT2.pdf'" target="_blank" rel="noopener">heren 2</a>, 
+      <a :href="pdfPath + 'CDT1.pdf'" target="_blank" rel="noopener">dames 1</a>, 
+      <a :href="pdfPath + 'CDT2.pdf'" target="_blank" rel="noopener">dames 2</a>.
+    </template>
   </Item>
 
   <Item>
@@ -85,10 +89,11 @@ const fileUrl = (filename) => {
       <UitslagenIcon />
     </template>
     <template #heading>Uitslagen vorig jaar</template>
-
-    Hier vind je de uitslagen van de 
-    <a :href="competitie2023" target="_blank" rel="noopener">competitie van 2023</a>
-    en van de meesterschappen: <a :href="ms2023klasseopen" target="_blank" rel="noopener">open klasse</a> en 
-    <a :href="ms2023klasse23" target="_blank" rel="noopener">2e en 3e klasse</a>.
+    <template #content>
+      Hier vind je de uitslagen van de 
+      <a :href="competitie2023" target="_blank" rel="noopener">competitie van 2023</a>
+      en van de meesterschappen: <a :href="ms2023klasseopen" target="_blank" rel="noopener">open klasse</a> en 
+      <a :href="ms2023klasse23" target="_blank" rel="noopener">2e en 3e klasse</a>.
+    </template>
   </Item>
 </template>

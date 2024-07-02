@@ -53,7 +53,7 @@ describe('Item Component', () => {
     // Mount the component with slot content
     wrapper = mount(Item, {
       slots: {
-        default: 'Slot Content'
+        content: 'Slot Content'
       },
     })
 

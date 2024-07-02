@@ -32,15 +32,19 @@
           <NieuwsItemIcon />
         </template>
         <template #heading>{{ nieuwsItem.titel_kort }}</template>
-        <div v-if="nieuwsItem.foto_naam">
-          <img :id="nieuwsItem._id" :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
-        </div>
-        <p>{{ nieuwsItem.inhoud_lang }}</p>
+        <template #content>
+          <div v-if="nieuwsItem.foto_naam">
+            <img :id="nieuwsItem._id" :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
+          </div>
+          <p>{{ nieuwsItem.inhoud_lang }}</p>
+        </template>
     </Item>
   </div>
   <div v-else>
     <Item>
-      <p>Laden...</p>
+      <template #content>
+        <p>Laden...</p>
+      </template>
     </Item>
   </div>
 </template>
