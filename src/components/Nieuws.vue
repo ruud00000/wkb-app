@@ -1,5 +1,5 @@
 <script setup>
-  import Item from './Item.vue'
+  import Item from './ItemNoIcon.vue'
   import NieuwsItemIcon from './icons/IconNieuwsItem.vue'
   import { ref, onMounted, computed } from 'vue'
 
@@ -22,21 +22,23 @@
     console.log('nieuwsItems: ', nieuwsItems.value)
     console.log('filteredNieuwsItems: ', filteredNieuwsItems.value)
   })
+
+  function formatTextWithLineBreaks(text) {
+    return text.replace(/\n/g, '<br>');
+  }
+
 </script>
 
 <template>
   <div v-if="filteredNieuwsItems">
 
     <Item v-for="nieuwsItem in filteredNieuwsItems">
-        <template #icon>
-          <NieuwsItemIcon />
-        </template>
         <template #heading>{{ nieuwsItem.titel_kort }}</template>
         <template #content>
           <div v-if="nieuwsItem.foto_naam">
             <img :id="nieuwsItem._id" :src="imgPath + nieuwsItem.foto_naam" alt="Foto" width="100%">
           </div>
-          <p>{{ nieuwsItem.inhoud_lang }}</p>
+          <p v-html="formatTextWithLineBreaks(nieuwsItem.inhoud_lang)"></p>
         </template>
     </Item>
   </div>
