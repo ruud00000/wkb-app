@@ -5,6 +5,7 @@ import DamesIcon from './icons/IconDames.vue'
 import TeamsIcon from './icons/IconTeams.vue'
 import UitslagenIcon from './icons/IconUitslagen.vue'
 
+import competitie2024 from '/src/assets/uitslagen/competitie2024.pdf'
 import competitie2023 from '/src/assets/uitslagen/competitie2023.pdf'
 import ms2023klasseopen from '/src/assets/uitslagen/ms2023-klasseopen.pdf'
 import ms2023klasse23 from '/src/assets/uitslagen/ms2023-klasse23.pdf'
@@ -90,10 +91,12 @@ const fileUrl = (filename) => {
     </template>
     <template #heading>Uitslagen vorig jaar</template>
     <template #content>
-      Hier vind je de uitslagen van de 
-      <a :href="competitie2023" target="_blank" rel="noopener">competitie van 2023</a>
-      en van de meesterschappen: <a :href="ms2023klasseopen" target="_blank" rel="noopener">open klasse</a> en 
-      <a :href="ms2023klasse23" target="_blank" rel="noopener">2e en 3e klasse</a>.
+      Hier vind je de uitslagen van de competitie van 
+      <a :href="competitie2024" target="_blank" rel="noopener">2024</a> en
+      <a :href="competitie2023" target="_blank" rel="noopener">2023</a>.
+      <!--
+      en van de meesterschappen <a :href="ms2023klasseopen" target="_blank" rel="noopener">open klasse</a> en 
+      <a :href="ms2023klasse23" target="_blank" rel="noopener">2e en 3e klasse</a>.-->
     </template>
   </Item>
 </template>
